@@ -1,0 +1,111 @@
+.form {
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    background-size: cover;
+    text-align: center;
+}
+
+.form input[type="text"],
+input[type="password"],
+input[type="email"] {
+    border: 1px solid white;
+    border-radius: 24px;
+    padding: 11px 10px;
+    width: 60%;
+    outline: none;
+    background: none;
+    margin: 1rem auto;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: Raleway;
+}
+
+.form input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover {
+    border: 1px solid #46a438;
+}
+
+.form input[type="date"] {
+    display: block;
+    border: 1px solid white;
+    border-radius: 24px;
+    padding: 8px 6px;
+    width: 45%;
+    outline: none;
+    background: none;
+    margin: 1rem auto;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: Raleway;
+}
+
+.form input[type="date"]:hover {
+    border: 1px solid #46a438;
+}
+
+::placeholder {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #e3ffc1;
+    font-weight: normal;
+    font-family: Caesar Dressing;
+    opacity: 0.7;
+}
+
+.form label {
+    color: #add8e6;
+    font-family: Caesar Dressing;
+}
+
+.date {
+    font-size: 1.8rem;
+}
+
+.gender {
+    font-size: 1.5rem;
+}
+
+.form button[type="submit"],
+button[type="reset"] {
+    border: 1px solid white;
+    border-radius: 24px;
+    padding: 11px 10px;
+    width: 35%;
+    outline: none;
+    background: none;
+    margin: 15px auto;
+    text-align: center;
+    color: #46a438;
+    font-size: 1.3rem;
+    font-family: Caesar Dressing;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.form button[type="submit"]:hover,
+button[type="reset"]:hover {
+    color: white;
+    background: #46a438;
+    font-size: 1.5rem;
+}
+
+h3 {
+    text-align: center;
+    color: #add8e6;
+    font-weight: normal;
+    font-family: Caesar Dressing;
+    margin: 25px;
+    font-size: 4.2rem;
+}

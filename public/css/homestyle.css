@@ -1,0 +1,22 @@
+.headtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: normal;
+    font-family: Caesar Dressing;
+    margin: 0;
+    font-size: 4em;
+}
+
+.container {
+    padding: 0 1.5em;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.username{
+    font-size: 1.2rem;
+}
+
+.questionlink a{
+    color: white;
+}
