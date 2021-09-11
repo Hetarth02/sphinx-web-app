@@ -1,3 +1,3 @@
 # sphinx-web-app
 
-Test
+To view code, switch to master branch.
