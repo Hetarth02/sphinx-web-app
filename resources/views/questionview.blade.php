@@ -7,7 +7,7 @@
     </head>
     <body>
         <nav class="navbar sticky-top navbar-dark menu">
-            <a class="navbar-brand" href="home">Sphinx</a>
+            <a class="navbar-brand" href="../home">Sphinx</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>

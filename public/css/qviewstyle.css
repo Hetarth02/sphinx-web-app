@@ -115,3 +115,33 @@ h3 {
     margin: 20px;
     font-size: 2.8em;
 }
+
+nav a{
+    text-align: center;
+    color: white;
+    font-family: Caesar Dressing;
+    font-size: 1.4rem;
+}
+
+nav a:hover{
+    font-weight: bold;
+}
+
+nav button[type="button"]{
+    margin: 0%;
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    font-family: Raleway;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px transparent;
+}
+
+nav button[type="button"]:hover{
+    background: transparent;
+    font-size: 1rem;
+}
+
+.mbutton{
+    text-align: right;
+}
