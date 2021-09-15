@@ -34,7 +34,7 @@
                 <p>
                     A: {{ $answer->answer }}
                     <br>
-                    <small class="username">By: <a href="../{{ $answer->username }}">{{ $answer->username }}</a></small>
+                    <small class="username">By: <a href="../user/{{ $answer->username }}">{{ $answer->username }}</a></small>
                 </p>
             @endforeach
             <div id="aform" class="modal fade">

@@ -28,7 +28,7 @@
                 <p>
                     Q: <span class="questionlink"><a href="displayquestion/{{ $data->qid }}">{{ $data->question }}</a></span>
                     <br>
-                    <small class="username">By: <a href="{{ $data->username }}">{{ $data->username }}</a></small>
+                    <small class="username">By: <a href="/user/{{ $data->username }}">{{ $data->username }}</a></small>
                 </p>
             @endforeach
         </section>
