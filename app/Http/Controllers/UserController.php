@@ -59,32 +59,31 @@ class UserController extends Controller
         return view('account')->with('data', $data);
     }
 
-    public function forgotpassword(Request $request)
-    {
-        //$email = $request->email;
-        //$username = $request->username;
-        // $email = 'abc@gmail.com';
-        // $username = 'abc';
-        // $new_password = Str::random(10);
-        // $crypt_new_password = bcrypt($new_password);
-        //commit
+    // public function forgotpassword(Request $request)
+    // {
+    //     $email = $request->email;
+    //     $username = $request->username;
+    //     $email = 'abc@gmail.com';
+    //     $username = 'abc';
+    //     $new_password = Str::random(10);
+    //     $crypt_new_password = bcrypt($new_password);
 
-        $to_name = 'Hetarth';
-        $to_email = 'hetarth02@gmail.com';
-        $data = array('name'=>"Sphinx", "body" => "A test mail");
+    //     $to_name = 'Hetarth';
+    //     $to_email = 'hetarth02@gmail.com';
+    //     $data = array('name'=>"Sphinx", "body" => "A test mail");
 
-        Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
-            $message->to($to_email, $to_name)->subject('Laravel Test Mail');
-            $message->from('sphinxlaravel@gmail.com','Test Mail');
-        });
+    //     Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
+    //         $message->to($to_email, $to_name)->subject('Laravel Test Mail');
+    //         $message->from('sphinxlaravel@gmail.com','Test Mail');
+    //     });
 
-        // $insert = DB::insert('insert into users password,password_values values ?,? where email = ? and username = ?', [$crypt_new_password,$new_password,$email,$username]);
-        // if ($insert) {
-        //     return response('Success');
-        // } else {
-        //     return response('Failed');
-        // }
+    //     $insert = DB::insert('insert into users password,password_values values ?,? where email = ? and username = ?', [$crypt_new_password,$new_password,$email,$username]);
+    //     if ($insert) {
+    //         return response('Success');
+    //     } else {
+    //         return response('Failed');
+    //     }
 
-        //return response([$new_password, $crypt_new_password]);
-    }
+    //     return response([$new_password, $crypt_new_password]);
+    // }
 }

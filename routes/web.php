@@ -32,4 +32,4 @@ Route::post('auth', [UserController::class, 'checkuserdetails']);
 Route::post('register', [UserController::class, 'adduserdetails']);
 Route::post('qsub', [QAController::class, 'qsub']);
 Route::post('asub/{qid}', [QAController::class, 'asub']);
-Route::get('forgotpassword', [UserController::class, 'forgotpassword']);
+//Route::get('forgotpassword', [UserController::class, 'forgotpassword']);
