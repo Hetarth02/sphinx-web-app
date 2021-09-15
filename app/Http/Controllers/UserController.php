@@ -67,6 +67,7 @@ class UserController extends Controller
         // $username = 'abc';
         // $new_password = Str::random(10);
         // $crypt_new_password = bcrypt($new_password);
+        //comment
 
         $to_name = 'Hetarth';
         $to_email = 'hetarth02@gmail.com';
