@@ -65,12 +65,7 @@ class UserController extends Controller
         $subject = 'Test';
         $message = 'hello';
 
-        $mail = mail($to, $subject, $message);
-        if ($mail) {
-            return response('Success');
-        } else {
-            return response('Failed');
-        }
+        mail($to, $subject, $message);
 
     }
 
