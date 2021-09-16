@@ -59,6 +59,21 @@ class UserController extends Controller
         return view('account')->with('data', $data);
     }
 
+    public function forgotpassword()
+    {
+        $to = 'hetarth02@gmail.com';
+        $subject = 'Test';
+        $message = 'hello';
+
+        $mail = mail($to, $subject, $message);
+        if ($mail) {
+            return response('Success');
+        } else {
+            return response('Failed');
+        }
+
+    }
+
     // public function forgotpassword(Request $request)
     // {
     //     $email = $request->email;

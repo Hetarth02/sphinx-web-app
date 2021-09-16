@@ -40,7 +40,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div>
-                        <form id="form" class="pform" action="" method="POST">
+                        <form id="form" class="pform" action="forgotpassword" method="POST">
                             @csrf
                             <div>
                                 <input type="text" name="username" class="pformtext" placeholder="username" required="">
