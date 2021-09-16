@@ -34,4 +34,4 @@ Route::post('register', [UserController::class, 'adduserdetails']);
 Route::post('qsub', [QAController::class, 'qsub']);
 Route::post('asub/{qid}', [QAController::class, 'asub']);
 Route::get('forgotpassword', [UserController::class, 'forgotpassword']);
-Route::get("send-email", [MailerController::class, "composeEmail"]);
+Route::get('send-email', [MailerController::class, "composeEmail"]);
