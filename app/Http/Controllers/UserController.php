@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -58,42 +56,4 @@ class UserController extends Controller
         $data = DB::select('select username,course,dob from users where username = ?', [$username]);
         return view('account')->with('data', $data);
     }
-
-    public function forgotpassword()
-    {
-        $to = 'hetarth02@gmail.com';
-        $subject = 'Test';
-        $message = 'hello';
-
-        mail($to, $subject, $message);
-
-    }
-
-    // public function forgotpassword(Request $request)
-    // {
-    //     $email = $request->email;
-    //     $username = $request->username;
-    //     $email = 'abc@gmail.com';
-    //     $username = 'abc';
-    //     $new_password = Str::random(10);
-    //     $crypt_new_password = bcrypt($new_password);
-
-    //     $to_name = 'Hetarth';
-    //     $to_email = 'hetarth02@gmail.com';
-    //     $data = array('name'=>"Sphinx", "body" => "A test mail");
-
-    //     Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
-    //         $message->to($to_email, $to_name)->subject('Laravel Test Mail');
-    //         $message->from('sphinxlaravel@gmail.com','Test Mail');
-    //     });
-
-    //     $insert = DB::insert('insert into users password,password_values values ?,? where email = ? and username = ?', [$crypt_new_password,$new_password,$email,$username]);
-    //     if ($insert) {
-    //         return response('Success');
-    //     } else {
-    //         return response('Failed');
-    //     }
-
-    //     return response([$new_password, $crypt_new_password]);
-    // }
 }

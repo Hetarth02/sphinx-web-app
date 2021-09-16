@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\QAController;
 use App\Http\Controllers\DisplayController;
+use App\Http\Controllers\MailerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,4 @@ Route::post('register', [UserController::class, 'adduserdetails']);
 Route::post('qsub', [QAController::class, 'qsub']);
 Route::post('asub/{qid}', [QAController::class, 'asub']);
 Route::get('forgotpassword', [UserController::class, 'forgotpassword']);
+Route::get("send-email", [MailerController::class, "composeEmail"]);
