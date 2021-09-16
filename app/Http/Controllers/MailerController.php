@@ -22,7 +22,7 @@ class MailerController extends Controller
         $check = DB::select('select * from users where username = ? and email = ?', [$username,$email]);
 
         if (empty($check)) {
-            return redirect('/');
+            return redirect()->back()->with('alert', 'Username does not exists!');
         } else {
             $insert = DB::update('update users set password = ?,password_values = ? where email = ? and username = ?', [$crypt_new_password,$new_password,$email,$username]);
             if ($insert) {
@@ -41,19 +41,19 @@ class MailerController extends Controller
 
                     $mail->Subject = 'Your new Password';
                     $mail->isHTML(true);
-                    $mail->Body = 'Here is your new temporary password'.$new_password;
+                    $mail->Body = 'Here is your new temporary password: '.$new_password;
 
                     if(!$mail->send()){
-                        echo 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
+                        return redirect()->back()->with('alert', 'Something seems wrong, please try again!');
                     }else{
-                        echo 'Message has been sent.';
+                        return redirect('/');
                     }
 
                 } catch (Exception $e) {
-                    return response()->with('error','Message could not be sent.');
+                    return redirect()->back()->with('alert', 'Something seems wrong, please try again!');
                 }
             } else {
-                return redirect('/');
+                return redirect()->back()->with('alert', 'Something seems wrong, please try again!');
             }
         }
     }
